@@ -10,7 +10,7 @@ interface ArrowSelectorProps {
   forwardInactive: boolean,
   innerWidth: number,
   label: string,
-  onClick: () => void,
+  onClick?: () => void,
   onNavigateBack: () => void,
   onNavigateForward: () => void,
 }

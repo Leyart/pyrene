@@ -10,7 +10,7 @@ interface TimeRangeNavigationBarProps {
   disabled?: boolean,
   from: number,
   lowerBound: number,
-  onClick: () => void,
+  onClick?: () => void,
   onNavigateBack: () => void,
   onNavigateForward: () => void,
   timezone: string,
