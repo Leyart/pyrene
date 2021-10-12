@@ -20,6 +20,6 @@ export type Filter = {
   type: 'singleSelect' | 'multiSelect' | 'text',
 };
 
-export type FilterValues = Record<Filter['id'], Options>;
+export type Filters = Record<Filter['id'], Options>;
 
 export type HandleFilterChange = (value: Options, negated: boolean, id: Filter['id']) => void;
