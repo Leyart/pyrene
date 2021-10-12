@@ -15,7 +15,7 @@ export type Filter = {
   id: string,
   label: string,
   negated?: boolean,
-  options: Options,
+  options?: Options,
   sorted?: boolean,
   type: 'singleSelect' | 'multiSelect' | 'text',
 };
