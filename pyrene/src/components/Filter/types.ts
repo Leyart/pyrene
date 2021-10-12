@@ -9,16 +9,16 @@ export type SingleSelectValue = SingleSelectOpt<DefaultValueType>;
 export type MultiselectValue = ReadonlyArray<MultiSelectOption>;
 export type InputFieldValue = DefaultValueType;
 
+export type Value = MultiselectValue | SingleSelectValue | InputFieldValue;
+
 export type Filter = {
   id: string,
   label: string,
   negated?: boolean,
-  options: Array<SingleSelectOption | MultiSelectOption>,
+  options: Value,
   sorted?: boolean,
   type: 'singleSelect' | 'multiSelect' | 'text',
 };
-
-export type Value = MultiselectValue | SingleSelectValue | InputFieldValue;
 
 export type FilterValues = Record<Filter['id'], Value>;
 
