@@ -7,7 +7,7 @@ import FilterPopoverButton from '../FilterPopOverButton/FilterPopoverButton';
 import FilterTag from './FilterTag';
 import {
   FilterValues,
-  Value,
+  Options,
   Filter,
   MultiselectValue,
   SingleSelectValue,
@@ -86,7 +86,7 @@ export default class FilterBar extends React.Component<FilterBarProps, FilterBar
     }));
   };
 
-  filterDidChange = (value: Value, negated: boolean, key: Filter['id']) => {
+  filterDidChange = (value: Options, negated: boolean, key: Filter['id']) => {
     this.setState((prevState) => ({
       unAppliedFilters: {
         values: { ...prevState.unAppliedFilters.values, [key]: value },
